@@ -109,10 +109,18 @@ export default {
 
             return src;
         },
+        isPreviewImageWeWeb() {
+            return this.content.previewImage && this.content.previewImage.startsWith('designs/');
+        },
+        previewImageSrc() {
+            return this.isPreviewImageWeWeb
+                ? `${wwLib.wwUtils.getCdnPrefix()}${this.content.previewImage}`
+                : this.content.previewImage;
+        },
         videoAttributes() {
             const attributes = {
                 src: this.content.file,
-                poster: this.content.previewImage,
+                poster: this.previewImageSrc,
                 muted: true,
             };
 
@@ -124,6 +132,7 @@ export default {
 
             return attributes;
         },
+
         isEditing() {
             /* wwEditor:start */
             return this.wwEditorState.editMode === wwLib.wwEditorHelper.EDIT_MODES.EDITION;
