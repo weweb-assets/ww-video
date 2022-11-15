@@ -11,7 +11,7 @@
     "dependencies": {},
     "devDependencies": {
         "@vue/eslint-config-prettier": "^6.0.0",
-        "@weweb/cli": "github:weweb-team/weweb-cli#webapp"
+        "@weweb/cli": "latest"
     },
     "license": "MIT"
 }

@@ -7,22 +7,6 @@ export default {
             fr: 'Vidéo',
             en: 'Vidéo',
         },
-        menuOptions: {
-            quick: {
-                sections: [
-                    'provider',
-                    'url',
-                    'file',
-                    'previewImage',
-                    'autoplay',
-                    'muted',
-                    'loop',
-                    'controls',
-                    'preload',
-                ],
-                bind: [{ prop: 'url', label: { en: 'Bind video url' } }],
-            },
-        },
         icon: 'play',
     },
     properties: {
