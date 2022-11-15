@@ -43,6 +43,9 @@ export default {
             isEventListener: false,
         };
     },
+    updated() {
+        console.log('UPDATE');
+    },
     computed: {
         videoElement() {
             return this.isWeWeb ? this.$refs.video : null;
