@@ -8,6 +8,7 @@ export default {
             en: 'Vidéo',
         },
         icon: 'play',
+        deprecated: 'Use a video from the Elements panel or from the new video plugins instead of this one.',
     },
     properties: {
         provider: {
