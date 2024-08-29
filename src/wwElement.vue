@@ -1,11 +1,10 @@
 <template>
-    <div class="ww-video">
+    <div class="ww-video" :class="{ editing: isEditing }">
         <div class="ww-video-container">
             <video
                 v-if="isWeWeb"
                 ref="videoPlayer"
                 class="ww-video-element"
-                :class="{ 'ww-editing': isEditing }"
                 playsinline
                 webkit-playsinline
                 v-bind="videoAttributes"
@@ -15,7 +14,6 @@
             <iframe
                 v-else
                 class="ww-video-element"
-                :class="{ 'ww-editing': isEditing }"
                 :src="src"
                 frameborder="0"
                 webkitallowfullscreen
@@ -208,8 +206,14 @@ export default {
 <style lang="scss" scoped>
 .ww-video {
     position: relative;
-    width: 100%;
-    height: 100%;
+    /* wwEditor:start */
+    &.editing::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+        z-index: 1;
+    }
+    /* wwEditor:end */
     .ww-video-container {
         position: absolute;
         width: 100%;
@@ -222,10 +226,6 @@ export default {
             width: 100%;
             height: 100%;
             overflow: hidden;
-
-            &.ww-editing {
-                pointer-events: none;
-            }
         }
     }
 }
