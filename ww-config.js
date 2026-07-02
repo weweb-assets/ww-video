@@ -83,6 +83,7 @@ export default {
             label: { en: 'Muted', fr: 'Muet' },
             type: 'TextRadioGroup',
             section: 'settings',
+            states: true,
             options: {
                 choices: [
                     {
@@ -125,6 +126,7 @@ export default {
             label: { en: 'Controls', fr: 'Contrôles' },
             type: 'TextRadioGroup',
             section: 'settings',
+            states: true,
             options: {
                 choices: [
                     {
