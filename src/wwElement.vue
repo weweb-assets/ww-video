@@ -101,11 +101,10 @@ export default {
             const attributes = {
                 src: this.content.file,
                 poster: this.previewImageSrc,
-                muted: true,
+                muted: !!this.content.muted || !!this.content.autoplay,
             };
 
             if (this.content.autoplay) attributes.autoplay = true;
-            if (this.content.muted) attributes.muted = true;
             if (this.content.controls) attributes.controls = true;
             if (this.content.loop) attributes.loop = true;
             if (this.content.preload) attributes.preload = true;
