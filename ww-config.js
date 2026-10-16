@@ -83,7 +83,6 @@ export default {
             label: { en: 'Muted', fr: 'Muet' },
             type: 'TextRadioGroup',
             section: 'settings',
-            states: true,
             options: {
                 choices: [
                     {

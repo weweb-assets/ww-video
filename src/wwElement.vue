@@ -101,7 +101,7 @@ export default {
             const attributes = {
                 src: this.content.file,
                 poster: this.previewImageSrc,
-                muted: !!this.content.muted || !!this.content.autoplay,
+                muted: true,
             };
 
             if (this.content.autoplay) attributes.autoplay = true;
