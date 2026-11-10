@@ -41,9 +41,6 @@ export default {
             isEventListener: false,
         };
     },
-    updated() {
-        console.log('UPDATE');
-    },
     computed: {
         videoElement() {
             return this.isWeWeb ? this.$refs.video : null;
@@ -108,7 +105,6 @@ export default {
             };
 
             if (this.content.autoplay) attributes.autoplay = true;
-            if (this.content.muted) attributes.muted = true;
             if (this.content.controls) attributes.controls = true;
             if (this.content.loop) attributes.loop = true;
             if (this.content.preload) attributes.preload = true;

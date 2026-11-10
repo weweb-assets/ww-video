@@ -125,6 +125,7 @@ export default {
             label: { en: 'Controls', fr: 'Contrôles' },
             type: 'TextRadioGroup',
             section: 'settings',
+            states: true,
             options: {
                 choices: [
                     {
